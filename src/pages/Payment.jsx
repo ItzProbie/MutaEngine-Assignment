@@ -52,7 +52,7 @@ const Payment = () => {
                 signature : response.razorpay_signature
               }
     
-              axios.post('http://localhost:4000/api/v1/payment/verifyPayment' , options2)
+              axios.post('https://muta-engine-assignment-be.vercel.app/api/v1/payment/verifyPayment' , options2)
               .then((res) => {
                 console.log(res.data);
     
