@@ -63,6 +63,18 @@ const UserPage = () => {
         navigate('/login');
 
     }
+    const signupWithGoogleHandler = async() => {
+
+        localStorage.clear();
+        navigate('/signup');
+
+    }
+    const signupHandler = async() => {
+
+        localStorage.clear();
+        navigate('/signin');
+
+    }
 
     const accType = localStorage.getItem('accountType');
 
@@ -94,6 +106,8 @@ const UserPage = () => {
             <button onClick={handleImageUpload}>Upload Image</button>
             <button onClick={handleVideoUpload}>Upload Video</button>
             <button onClick={logoutHandler}>Logout</button>
+            <button onClick={signupWithGoogleHandler}>Signup with Google</button>
+            <button onClick={signupHandler}>Signup In</button>
             {
                 media && media.map((item)=>{
                      return (
